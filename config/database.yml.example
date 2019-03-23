@@ -1,0 +1,5 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  url: postgres://username:password@domain
+  pool: 40

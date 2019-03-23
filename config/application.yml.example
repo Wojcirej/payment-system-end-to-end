@@ -1,0 +1,3 @@
+REMOTE_PROTOCOL: "https"
+REMOTE_DOMAIN: "example.com/"
+REMOTE_BACKEND_URL: "https://example-backend.com/"
