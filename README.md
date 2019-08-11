@@ -8,6 +8,7 @@ Tests are using staging environment, including staging's remote database.
 * RSpec
 * Capybara
 * Cuprite webdriver
+* Selenium webdriver
 * ActiveRecord to map database tables for classes
 * FactoryBot for preparing test data
 
@@ -33,6 +34,9 @@ For both files there are prepared examples you just need to fill.
 
 # Run tests
 `rspec`
+
+# Selenium support
+Make sure to install [ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver) or [] before switching driver to any chrome selenium related one.
 
 # Potential TODOs
 * Find better way to share models logic between actual backend app and this app. Currently I'm repeating myself, and it might lead to incosistencies. But at least I can quickly set up test data if necessary. Perhaps some gems?

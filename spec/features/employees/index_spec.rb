@@ -1,4 +1,5 @@
 require 'spec_config'
+require 'pry'
 
 def open_employees_list_page
   open_home_page
@@ -6,7 +7,7 @@ def open_employees_list_page
 end
 
 def navigate_to_second_page
-  page.find('a', text: "2").trigger(:click)
+  page.find('a', text: "2", match: :first).click
 end
 
 feature "Employee's list page", js: true do
@@ -90,7 +91,7 @@ feature "Employee's list page", js: true do
         expect(page).to have_selector("paginator-pages-selector")
         within("paginator-pages-selector") do
           navigate_to_second_page
-          active_page_button = page.find('a.active')
+          active_page_button = page.find('a.active', text: "2")
           expect(active_page_button.text).to eq("2")
         end
       end
@@ -100,7 +101,7 @@ feature "Employee's list page", js: true do
         expect(page).to have_selector("paginator-pages-selector")
         within("paginator-pages-selector") do
           navigate_to_second_page
-          previous_page_button = page.all('a').first
+          previous_page_button = page.find('a', text: "«")
           expect(previous_page_button.text).to eq("«")
         end
       end
