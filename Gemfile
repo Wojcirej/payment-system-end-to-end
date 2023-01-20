@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'activerecord', '~> 5.2', '>= 5.2.2.1'
+gem 'activerecord', '~> 6.1'
 gem 'pg', '>= 0.18', '< 2.0'
 
 gem 'rspec', '~> 3.8'
